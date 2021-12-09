@@ -1,9 +1,6 @@
 <?php
 
 include 'koneksi.php';
-if (!defined('HS')){
-    die('Tidak boleh di akses langsung.');
-}
 
 function mypre($value)
 {

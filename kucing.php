@@ -307,7 +307,7 @@ function prosesPesanTeks($message)
             sendApiMsg($chatid, $text, false, 'Markdown');
         break;
 
-        case preg_match("/\/echo (.*)/", $pesan, $hasil):
+        case preg_match("/\/echo (.*)", $pesan, $hasil):
             sendApiAction($chatid);
             $text = 'Saya tidak paham maksud Anda, silahkan menjawab dengan format yang benar';
             sendApiMsg($chatid, $text, false, 'Markdown');
@@ -316,10 +316,7 @@ function prosesPesanTeks($message)
         default :
             sendApiAction($chatid);
             $text = 'Saya tidak mengerti perkataan Anda. Namun saya tetap berusaha mendengarkan Anda';
-            sendApiMsg($chatid, $text, false, 'MArkdown');
+            sendApiMsg($chatid, $text, false, 'Markdown');
         break;
     }
 }
-
-if (strlen($TOKEN)<20)
-    die("Token mohon diisi dengan benar!\n");

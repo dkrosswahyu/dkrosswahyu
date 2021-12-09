@@ -1,8 +1,6 @@
 <?php
 include 'koneksi.php';
-if (!defined('HS')){
-    die('Tidak boleh diakses langsung.');
-}
+
 function prosesApiMessage($sumber)
 {
     $updateid = $sumber['update_id'];
@@ -19,7 +17,7 @@ function prosesApiMessage($sumber)
             // tidak diproses silhkan dikembangkan sendiri
         }
     }
-    if(isset($sumber['callback_qurery'])){
+    if(isset($sumber['callback_query'])){
         prosesCallBackQuery($sumber['callback_query']);
     }
     return $updateid;
